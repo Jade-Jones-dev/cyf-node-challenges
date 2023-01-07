@@ -16,8 +16,8 @@ app.get("/", (req, res) => {
 })
 
 
-app.get('/:cities/pharmacies', (req, res) => {
-    let city = req.params.cities;
+app.get('/:city/pharmacies', (req, res) => {
+    let city = req.params.city;
     if(city === "stratford"){
         res.json(stratford.pharmacies)
     }
@@ -28,7 +28,7 @@ app.get('/:cities/pharmacies', (req, res) => {
 })
 // /colleges
 app.get('/:city/colleges', (req, res) => {
-    let city = req.params.cities;
+    let city = req.params.city;
     if(city === "stratford"){
         res.json(stratford.colleges)
     }
@@ -40,7 +40,7 @@ app.get('/:city/colleges', (req, res) => {
 // /doctors
 
 app.get('/:city/doctors', (req, res) => {
-    let city = req.params.cities;
+    let city = req.params.city;
     if(city === "stratford"){
         res.json(stratford.doctors)
     }
@@ -52,7 +52,7 @@ app.get('/:city/doctors', (req, res) => {
 // /hospitals
 
 app.get( "/:city/hospitals", (req, res) => {
-    let city = req.params.cities;
+    let city = req.params.city;
     if(city === "stratford"){
         res.json(stratford.hospitals)
     }
@@ -112,7 +112,7 @@ app.get("/:city/:category", (req, res) =>{
     // }
 })
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
     console.log(`listening on port: ${port}`);
