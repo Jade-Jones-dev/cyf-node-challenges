@@ -16,51 +16,51 @@ app.get("/", (req, res) => {
 })
 
 
-app.get('/:city/pharmacies', (req, res) => {
-    let city = req.params.city;
-    if(city === "stratford"){
-        res.json(stratford.pharmacies)
-    }
-    else if (city === "heathrow"){
-        res.json(heathrow.pharmacies)
-    }
-    else res.json(harrow.pharmacies)  
-})
-// /colleges
-app.get('/:city/colleges', (req, res) => {
-    let city = req.params.city;
-    if(city === "stratford"){
-        res.json(stratford.colleges)
-    }
-    else if (city === "heathrow"){
-        res.json(heathrow.colleges)
-    }
-    else res.json(harrow.colleges)  
-})
-// /doctors
+// app.get('/:city/pharmacies', (req, res) => {
+//     let city = req.params.city;
+//     if(city === "stratford"){
+//         res.json(stratford.pharmacies)
+//     }
+//     else if (city === "heathrow"){
+//         res.json(heathrow.pharmacies)
+//     }
+//     else res.json(harrow.pharmacies)  
+// })
+// // /colleges
+// app.get('/:city/colleges', (req, res) => {
+//     let city = req.params.city;
+//     if(city === "stratford"){
+//         res.json(stratford.colleges)
+//     }
+//     else if (city === "heathrow"){
+//         res.json(heathrow.colleges)
+//     }
+//     else res.json(harrow.colleges)  
+// })
+// // /doctors
 
-app.get('/:city/doctors', (req, res) => {
-    let city = req.params.city;
-    if(city === "stratford"){
-        res.json(stratford.doctors)
-    }
-    else if (city === "heathrow"){
-        res.json(heathrow.doctors)
-    }
-    else res.json(harrow.doctors)  
-})
-// /hospitals
+// app.get('/:city/doctors', (req, res) => {
+//     let city = req.params.city;
+//     if(city === "stratford"){
+//         res.json(stratford.doctors)
+//     }
+//     else if (city === "heathrow"){
+//         res.json(heathrow.doctors)
+//     }
+//     else res.json(harrow.doctors)  
+// })
+// // /hospitals
 
-app.get( "/:city/hospitals", (req, res) => {
-    let city = req.params.city;
-    if(city === "stratford"){
-        res.json(stratford.hospitals)
-    }
-    else if (city === "heathrow"){
-        res.json(heathrow.hospitals)
-    }
-    else res.json(harrow.hospitals)  
-})
+// app.get( "/:city/hospitals", (req, res) => {
+//     let city = req.params.city;
+//     if(city === "stratford"){
+//         res.json(stratford.hospitals)
+//     }
+//     else if (city === "heathrow"){
+//         res.json(heathrow.hospitals)
+//     }
+//     else res.json(harrow.hospitals)  
+// })
 
 // /:city/:category
 
